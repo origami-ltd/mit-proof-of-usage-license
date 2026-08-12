@@ -1,4 +1,4 @@
-# MIT License with Proof-of-Usage Condition
+# MIT License with Proof-of-Usage Condition (MIT-PoU)
 
 Copyright (c) [Year] [Copyright Holders]
 
