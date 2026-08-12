@@ -28,14 +28,22 @@ source-available licence and is described as one wherever it appears.
 
 **Description:**
 
-The MIT License, unmodified, with one added condition: an operator whose automated system reads,
-ingests, indexes, embeds, trains on, fine-tunes from, or produces output derived from the software
-is required to record that usage, by opening a pull request against a provenance branch in the
-repository and adding a row naming the system, the operator, an ISO 8601 timestamp, the scope of
-what was accessed, the purpose, and a contact address.
+The MIT License, unmodified, with one added condition in two halves. An operator whose automated
+system reads, ingests, indexes, embeds, trains on, fine-tunes from, or produces output derived
+from the software must (a) record that usage in the repository, by opening a pull request against
+a provenance branch and adding a row naming the system, the operator, an ISO 8601 timestamp, the
+scope accessed, the purpose, a contact address and a provenance hash; and (b) name the repository
+in the credits of the resulting product, alongside the same hash.
 
-Nothing further is required: no payment, no attribution beyond MIT's, and no restriction on what
-may be built. The condition asks for disclosure, not restraint.
+The hash is SHA-256("SystemName:OperatorName:ISODate:TargetRepositoryURL"), lowercase hex, and
+exists so that the two halves can be checked against each other by anyone.
+
+Nothing further is required: no payment, no revenue share, and no restriction on what may be
+built.
+
+Note for reviewers: half (b) is an attribution-in-credits term of the kind the BSD 4-clause
+advertising clause introduced, with the known GPL-incompatibility that implies. It is stated
+plainly in the licence's own documentation rather than left to be discovered.
 
 **Why a new identifier rather than an exception:** the condition adds an obligation to the grant
 rather than removing one from it, and it applies to all use by automated systems rather than to a

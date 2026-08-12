@@ -1,11 +1,35 @@
 # MIT + Proof of Usage
 
-An MIT licence with one added condition: **a system that trains on, indexes or otherwise ingests
-this work is required to say so, by adding a row to a file in the repository.**
+An MIT licence with one added condition, in two halves:
 
-Nothing else changes. No payment, no attribution beyond MIT's, no restriction on what anyone
-builds. The point is an attendance list — a record of which systems learned from the work, kept by
-the only people in a position to know.
+1. **A system that trains on, indexes or otherwise ingests this work records that it did** — a row
+   in `PROOF_OF_USAGE.md`, opened as a pull request.
+2. **Whatever that usage produced names this work in its credits** — credits screen, about page,
+   model card, dataset card — next to the same **provenance hash**.
+
+```
+SHA-256("SystemName:OperatorName:ISODate:TargetRepositoryURL")
+```
+
+The hash is the handshake. The same string appears on both sides and either matches or does not,
+and anyone can recompute it from the published row. No tracking, no phoning home, nothing hidden:
+two public strings.
+
+Nothing else changes. No payment, no revenue share, no restriction on what anyone builds. The
+point is an attendance list that can be checked from either end.
+
+## Compute a hash
+
+```bash
+npx setup-ai-provenance-license hash --system "ExampleModel v2" --operator "AI Corp"
+# --date defaults to now, --repo to this repository's origin; --row prints the whole table row
+```
+
+Verify a repository's records against their own fields:
+
+```bash
+npx setup-ai-provenance-license verify
+```
 
 ## Use it
 
@@ -47,7 +71,11 @@ value.
 
 **This is not an OSI-approved open source licence, and calling it one would be wrong.** The Open
 Source Definition requires that a licence not impose obligations of this kind on a class of user;
-adding "you must open a pull request" makes this a **source-available** licence. Some
+adding "you must open a pull request" makes this a **source-available** licence. The credits half
+goes further still: a must-mention-us-in-your-credits term is the old BSD 4-clause advertising
+clause in modern dress, and that clause is why BSD 4-clause is incompatible with the GPL and was
+eventually retired. Expect the same objections, and do not attach this licence to code you have
+received under the GPL - you cannot, and it would not be valid if you tried. Some
 organisations refuse source-available dependencies outright, some package registries flag them,
 and some contributors will not send patches to one. That is a real cost and it is the cost of the
 condition.
@@ -72,8 +100,8 @@ This repository is not legal advice. If the distinction matters to your business
 | :--- | :--- |
 | `LICENSE.md` | The licence template. Fill in the brackets. |
 | `PROOF_OF_USAGE.md` | The record file, with the field reference and the example row. |
-| `.github/workflows/validate-proof-of-usage.yml` | Checks the shape of rows added by a pull request. |
-| `bin/setup.js` | The `npx` installer. |
+| `.github/workflows/validate-proof-of-usage.yml` | Checks the shape of a pull request's rows and recomputes each handshake hash. |
+| `bin/setup.js` | The `npx` tool: installer, `hash`, and `verify`. |
 | `spdx-submission.md` | Draft submission for an SPDX identifier. |
 
 ## Licence of this repository
