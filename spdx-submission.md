@@ -18,9 +18,9 @@ asks for one.
 **License author or steward:** Erasmo Bellumat / Origami 限
 
 **URL of the license text:**
-https://github.com/origami-ltd/mit-proof-of-usage-license/blob/v1.0/LICENSE.md
+https://github.com/origami-ltd/mit-proof-of-usage-license/blob/v1.1/LICENSE.md
 
-Tagged and frozen at `v1.0`. `main` may gain clarifications; the tag is what an identifier would
+Tagged and frozen at `v1.1`. `main` may gain clarifications; the tag is what an identifier would
 point at, and any change to the terms themselves would be a new version and a new identifier.
 
 **OSI status:** Not submitted to OSI, and not expected to be approved. The added condition places
