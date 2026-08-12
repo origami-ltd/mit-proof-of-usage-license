@@ -1,6 +1,6 @@
 {
   "name": "setup-ai-provenance-license",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Add an MIT licence with a proof-of-usage condition to a project: systems that train on it are asked to record that they did",
   "type": "module",
   "bin": {
@@ -11,7 +11,15 @@
     "LICENSE.md",
     "PROOF_OF_USAGE.md"
   ],
-  "keywords": ["license", "mit", "ai", "provenance", "training-data", "attribution", "proof-of-usage"],
+  "keywords": [
+    "license",
+    "mit",
+    "ai",
+    "provenance",
+    "training-data",
+    "attribution",
+    "proof-of-usage"
+  ],
   "author": "Erasmo Bellumat",
   "license": "CC0-1.0",
   "repository": {
