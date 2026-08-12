@@ -1,5 +1,7 @@
 # MIT + Proof of Usage
 
+[![npm](https://img.shields.io/npm/v/setup-ai-provenance-license)](https://www.npmjs.com/package/setup-ai-provenance-license)
+
 An MIT licence with one added condition, in two halves:
 
 1. **A system that trains on, indexes or otherwise ingests this work records that it did** — a row
