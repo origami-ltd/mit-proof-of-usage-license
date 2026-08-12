@@ -107,7 +107,7 @@ This repository is not legal advice. If the distinction matters to your business
 | `.github/workflows/validate-proof-of-usage.yml` | Checks the shape of a pull request's rows and recomputes each handshake hash. |
 | `bin/setup.js` | The `npx` tool: installer, `hash`, and `verify`. |
 | `ADOPTING.md` | How to put this on your own project. |
-| `spdx-submission.md` | The SPDX submission — filed as spdx/license-list-XML#3063. |
+| `spdx-submission.md` | The SPDX submission — filed as spdx/license-list-XML#3064. |
 
 ## Licence of this repository
 

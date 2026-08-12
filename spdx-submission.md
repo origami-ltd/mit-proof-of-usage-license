@@ -4,6 +4,9 @@ Not submitted. This is the request, written out, ready to send when the licence 
 used somewhere — SPDX asks that a licence be in use before it is listed, and a licence with no
 users is a request for a namespace rather than an identifier.
 
+**Filed as spdx/license-list-XML#3064** (an earlier #3063 was closed in favour of it, so the
+request and the text agree from the first line).
+
 **Where it goes:** open an issue on
 [spdx/license-list-XML](https://github.com/spdx/license-list-XML/issues) using the "New license/
 exception request" template, then follow up with a pull request adding the XML if the legal team
@@ -18,9 +21,9 @@ asks for one.
 **License author or steward:** Erasmo Bellumat / Origami 限
 
 **URL of the license text:**
-https://github.com/origami-ltd/mit-proof-of-usage-license/blob/v1.1/LICENSE.md
+https://github.com/origami-ltd/mit-proof-of-usage-license/blob/v1.0.1/LICENSE.md
 
-Tagged and frozen at `v1.1`. `main` may gain clarifications; the tag is what an identifier would
+Tagged and frozen at `v1.0.1`. `main` may gain clarifications; the tag is what an identifier would
 point at, and any change to the terms themselves would be a new version and a new identifier.
 
 **OSI status:** Not submitted to OSI, and not expected to be approved. The added condition places
