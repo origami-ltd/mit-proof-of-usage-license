@@ -35,6 +35,8 @@ npx setup-ai-provenance-license verify
 
 ## Use it
 
+Step by step, including the parts worth thinking about first: **[ADOPTING.md](ADOPTING.md)**.
+
 **As a template.** Click *Use this template* at the top of this repository. You get `LICENSE.md`,
 `PROOF_OF_USAGE.md` and the validation workflow already wired up. Then:
 
@@ -104,7 +106,8 @@ This repository is not legal advice. If the distinction matters to your business
 | `PROOF_OF_USAGE.md` | The record file, with the field reference and the example row. |
 | `.github/workflows/validate-proof-of-usage.yml` | Checks the shape of a pull request's rows and recomputes each handshake hash. |
 | `bin/setup.js` | The `npx` tool: installer, `hash`, and `verify`. |
-| `spdx-submission.md` | Draft submission for an SPDX identifier. |
+| `ADOPTING.md` | How to put this on your own project. |
+| `spdx-submission.md` | The SPDX submission — filed as spdx/license-list-XML#3063. |
 
 ## Licence of this repository
 
