@@ -1,4 +1,7 @@
 #!/usr/bin/env node
+// SPDX-License-Identifier: CC0-1.0
+// The tooling for this licence is public domain on purpose: a template nobody may freely copy is
+// a template nobody adopts. Stamp your own project with the licence, not this file.
 /**
  * Three jobs, one binary.
  *
