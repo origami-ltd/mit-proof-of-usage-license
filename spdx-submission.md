@@ -18,13 +18,26 @@ asks for one.
 **License author or steward:** Erasmo Bellumat / Origami 限
 
 **URL of the license text:**
-https://github.com/origami-ltd/mit-proof-of-usage-license/blob/main/LICENSE.md
+https://github.com/origami-ltd/mit-proof-of-usage-license/blob/v1.0/LICENSE.md
+
+Tagged and frozen at `v1.0`. `main` may gain clarifications; the tag is what an identifier would
+point at, and any change to the terms themselves would be a new version and a new identifier.
 
 **OSI status:** Not submitted to OSI, and not expected to be approved. The added condition places
 an obligation on a class of user, which the Open Source Definition does not permit. This is a
 source-available licence and is described as one wherever it appears.
 
-**Is it in use?** [list repositories and their URLs here before submitting]
+**Is it in use?** Yes, by four repositories at the time of writing:
+
+- https://github.com/origami-ltd/wasm.com.br
+- https://github.com/origami-ltd/wasm-revc
+- https://github.com/origami-ltd/wasm-generals (the `web/` portion; the engine is GPL-3.0)
+- https://github.com/origami-ltd/mit-proof-of-usage-license (the template itself)
+
+All four are by the same author, which is the honest weakness of this submission: SPDX asks for a
+licence in use, and use by unrelated projects would make the case properly. If the list team would
+rather wait for outside adoption, that is a reasonable answer and this can sit until there is
+some.
 
 **Description:**
 
