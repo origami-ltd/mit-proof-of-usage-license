@@ -95,7 +95,7 @@ Not `MIT` — the terms differ, and claiming the identifier misleads every tool 
 
 Same idea in `Cargo.toml` (`license-file = "LICENSE.md"`) and `pyproject.toml`
 (`license = { file = "LICENSE.md" }`). In source headers, `SPDX-License-Identifier:
-LicenseRef-MIT-AI-Provenance` is the correct form for a licence with no registered identifier.
+LicenseRef-MIT-PoU` is the correct form for a licence with no registered identifier.
 
 An SPDX identifier has been requested — [spdx/license-list-XML#3064](https://github.com/spdx/license-list-XML/issues/3064).
 Adoption by projects other than the author's is the part of that request that is currently weak,

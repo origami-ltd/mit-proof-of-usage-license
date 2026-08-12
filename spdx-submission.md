@@ -1,4 +1,4 @@
-# SPDX submission draft — `MIT-AI-Provenance`
+# SPDX submission draft — `MIT-PoU`
 
 Not submitted. This is the request, written out, ready to send when the licence has actually been
 used somewhere — SPDX asks that a licence be in use before it is listed, and a licence with no
@@ -16,7 +16,7 @@ asks for one.
 
 **Proposed full name:** MIT License with AI Provenance Condition
 
-**Proposed short identifier:** `MIT-AI-Provenance`
+**Proposed short identifier:** `MIT-PoU`
 
 **License author or steward:** Erasmo Bellumat / Origami 限
 

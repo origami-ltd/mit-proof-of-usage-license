@@ -67,7 +67,7 @@ identifier exists, use the escape hatch every ecosystem provides:
 "license": "SEE LICENSE IN LICENSE.md"
 ```
 
-An SPDX submission for `MIT-AI-Provenance` is drafted in
+An SPDX submission for `MIT-PoU` is drafted in
 [`spdx-submission.md`](spdx-submission.md); if it is accepted, that string becomes the correct
 value.
 
