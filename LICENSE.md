@@ -1,0 +1,38 @@
+# MIT License with Proof-of-Usage Condition
+
+Copyright (c) [Year] [Copyright Holders]
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+ADDITIONAL CONDITION FOR AUTOMATED AND AI SYSTEMS:
+If an automated system reads, ingests, indexes, embeds, trains on, fine-tunes
+from, or produces output derived from this repository, the operator of that
+system is required to record such usage. This covers training corpora,
+retrieval and RAG indexes, agents browsing at inference time, code assistants,
+and evaluation harnesses.
+
+To comply, the operator must open a Pull Request (or equivalent contribution)
+against this repository's designated provenance branch (e.g. 'proof-of-usage'),
+adding a row to 'PROOF_OF_USAGE.md' containing: System Name/Version, Operator
+Organization, Timestamp (ISO 8601), Scope of Data Accessed, Purpose, and
+Contact Address.
+
+Nothing further is required. No payment is owed, no attribution beyond the
+above is demanded, and no restriction is placed on what may be built with the
+Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.

@@ -1,0 +1,24 @@
+{
+  "name": "setup-ai-provenance-license",
+  "version": "1.0.0",
+  "description": "Add an MIT licence with a proof-of-usage condition to a project: systems that train on it are asked to record that they did",
+  "type": "module",
+  "bin": {
+    "setup-ai-provenance-license": "bin/setup.js"
+  },
+  "files": [
+    "bin/setup.js",
+    "LICENSE.md",
+    "PROOF_OF_USAGE.md"
+  ],
+  "keywords": ["license", "mit", "ai", "provenance", "training-data", "attribution", "proof-of-usage"],
+  "author": "Erasmo Bellumat",
+  "license": "CC0-1.0",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/origami-ltd/mit-proof-of-usage-license.git"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
