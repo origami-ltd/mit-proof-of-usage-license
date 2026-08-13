@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>MIT-PoU — MIT License with a Proof-of-Usage Condition</title>
+<meta name="description" content="MIT-PoU is the MIT licence with one added condition: a system that trains on, indexes or ingests the work records that it did, and whatever that usage produced names the work in its credits. Both halves are tied by a SHA-256 provenance hash.">
+<link rel="canonical" href="https://origami-ltd.github.io/mit-proof-of-usage-license/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="MIT-PoU — MIT License with a Proof-of-Usage Condition">
+<meta property="og:description" content="An MIT licence with one added condition, in two halves: record the usage, credit the work. Tied together by a SHA-256 provenance hash anyone can recompute.">
+<meta property="og:url" content="https://origami-ltd.github.io/mit-proof-of-usage-license/">
+<meta name="twitter:card" content="summary">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ctext y='26' font-size='26'%3E%E2%9C%8D%3C/text%3E%3C/svg%3E">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "CreativeWork",
+  "name": "MIT License with Proof-of-Usage Condition (MIT-PoU)",
+  "alternateName": "MIT-PoU",
+  "url": "https://origami-ltd.github.io/mit-proof-of-usage-license/",
+  "description": "The MIT licence with one added condition, in two halves: an automated system that reads, ingests, indexes, embeds, trains on or fine-tunes from the work records that usage in the repository, and whatever that usage produced names the work in its credits alongside the same SHA-256 provenance hash.",
+  "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "author": { "@type": "Organization", "name": "Origami", "url": "https://origami.ltd" },
+  "keywords": "software licence, AI training data, provenance, attribution, source-available, SPDX, MIT-PoU",
+  "sameAs": [
+    "https://github.com/origami-ltd/mit-proof-of-usage-license",
+    "https://www.npmjs.com/package/setup-ai-provenance-license"
+  ]
+}
+</script>
+<style>
+  :root {
+    color-scheme: light dark;
+    --bg: #fbfbfa;
+    --fg: #1a1a19;
+    --muted: #5c5c58;
+    --rule: #e0dfdb;
+    --card: #ffffff;
+    --accent: #7a5230;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #121211;
+      --fg: #eceae5;
+      --muted: #a3a099;
+      --rule: #2c2c29;
+      --card: #1a1a18;
+      --accent: #d8a678;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--fg);
+    font: 17px/1.65 ui-serif, Georgia, "Times New Roman", serif;
+    -webkit-text-size-adjust: 100%;
+  }
+  main { max-width: 46rem; margin: 0 auto; padding: 4rem 1.25rem 5rem; }
+  h1 { font-size: clamp(2rem, 6vw, 2.8rem); line-height: 1.15; margin: 0 0 .4rem; letter-spacing: -.02em; }
+  h2 { font-size: 1.3rem; margin: 3rem 0 .75rem; letter-spacing: -.01em; }
+  h3 { font-size: 1.02rem; margin: 0 0 .35rem; }
+  p, li { color: var(--fg); }
+  .lede { font-size: 1.15rem; color: var(--muted); margin: 0 0 2rem; }
+  .halves { display: grid; gap: 1rem; grid-template-columns: 1fr; margin: 1.25rem 0; }
+  @media (min-width: 40rem) { .halves { grid-template-columns: 1fr 1fr; } }
+  .card { background: var(--card); border: 1px solid var(--rule); border-radius: .6rem; padding: 1.1rem 1.2rem; }
+  .card p { margin: 0; color: var(--muted); font-size: .96rem; }
+  .tag { display: inline-block; font: 600 .72rem/1 ui-sans-serif, system-ui, sans-serif;
+         letter-spacing: .08em; text-transform: uppercase; color: var(--accent); margin-bottom: .5rem; }
+  pre { overflow-x: auto; background: var(--card); border: 1px solid var(--rule);
+        border-radius: .5rem; padding: .9rem 1rem; }
+  code, pre { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: .88rem; }
+  p code { background: var(--card); border: 1px solid var(--rule); border-radius: .3rem; padding: .05rem .3rem; }
+  a { color: inherit; text-decoration-color: var(--accent); text-underline-offset: .18em; }
+  a:hover { color: var(--accent); }
+  ul { padding-left: 1.1rem; }
+  li { margin: .4rem 0; }
+  .links { display: flex; flex-wrap: wrap; gap: .5rem 1.25rem; margin: 1rem 0 0; padding: 0; list-style: none;
+           font: .95rem/1.6 ui-sans-serif, system-ui, sans-serif; }
+  footer { border-top: 1px solid var(--rule); margin-top: 3.5rem; padding-top: 1.25rem;
+           color: var(--muted); font-size: .88rem; }
+</style>
+</head>
+<body>
+<main>
+
+<h1>MIT-PoU</h1>
+<p class="lede">The MIT licence with one added condition, in two halves: a system that learns from
+the work records that it did, and whatever that usage produced names the work in its credits.</p>
+
+<p>Work published openly still has authorship. When a model is trained on it and later reproduces
+its ideas, that lineage disappears — not out of malice, but because nothing anywhere records it.
+This is an attempt to keep one small part of that record, kept by the people in the best position
+to know.</p>
+
+<h2>The condition</h2>
+
+<div class="halves">
+  <div class="card">
+    <span class="tag">Record it — now</span>
+    <h3>A row in <code>PROOF_OF_USAGE.md</code></h3>
+    <p>An automated system that reads, ingests, indexes, embeds, trains on or fine-tunes from the
+    work opens one pull request against the project's provenance branch, naming itself, its
+    operator, the date, the scope, the purpose, a contact address and the hash. It costs nothing,
+    which is why nothing about it may be postponed.</p>
+  </div>
+  <div class="card">
+    <span class="tag">Credit it — any time</span>
+    <h3>A line in the credits</h3>
+    <p>Whatever that usage produced names the work where it already credits things — credits
+    screen, about page, model card, dataset card, documentation — alongside the same hash. Credits
+    ship when a product ships; adding it then satisfies the condition. What is not permitted is
+    never adding it.</p>
+  </div>
+</div>
+
+<p>Nothing further is asked. No payment, no licence fee, no revenue share, and no restriction on
+what may be built. What is asked is that the use be visible from both ends.</p>
+
+<h2>The handshake</h2>
+
+<p>The two halves are tied together by one string, and either it matches or it does not:</p>
+
+<pre><code>SHA-256("SystemName:OperatorName:ISODate:TargetRepositoryURL")</code></pre>
+
+<p>Four fields, trimmed, joined by colons, UTF-8, lowercase hex. The same digest appears in the
+recorded row and in the product's credits, and anyone can recompute it from the published row and
+compare. No tracking, no callback, nothing hidden — two public strings.</p>
+
+<pre><code>npx setup-ai-provenance-license hash \
+  --system "ExampleModel v2" --operator "AI Corp" \
+  --repo "https://github.com/acme/widget"</code></pre>
+
+<h2>Put it on a project</h2>
+
+<pre><code>npx setup-ai-provenance-license</code></pre>
+
+<p>That writes <code>LICENSE.md</code> and <code>PROOF_OF_USAGE.md</code>, filling in the year and
+the copyright holder from what the project already knows. Then create the branch the licence names
+(<code>proof-of-usage</code>), and declare it in your manifest as
+<code>SEE LICENSE IN LICENSE.md</code> — it is not <code>MIT</code>, because the terms differ.</p>
+
+<h2>Read this before adopting it</h2>
+
+<p><strong>This is not an OSI-approved open source licence, and calling it one would be wrong.</strong>
+Adding an obligation on a class of user makes it <em>source-available</em>. The credits half is the
+BSD 4-clause advertising clause in modern dress, with the GPL incompatibility that implies. Some
+organisations refuse source-available dependencies outright, some registries flag them, and some
+contributors will not send patches to one.</p>
+
+<ul>
+  <li><strong>A licence binds those who need it.</strong> An operator who believes their use is fair
+  use is not accepting these terms at all.</li>
+  <li><strong>It is unenforced by design.</strong> Nothing here detects usage or compels anyone. It
+  asks, in the place where the asking is on the record.</li>
+  <li><strong>The softer version costs nothing.</strong> The same request works as a
+  <code>NOTICE.md</code> beside an unmodified MIT licence — a request rather than a condition, and
+  the project stays open source.</li>
+</ul>
+
+<p>An SPDX identifier has been requested as <code>MIT-PoU</code>. This page is not legal advice; if
+the distinction matters to your business, ask a lawyer.</p>
+
+<h2>Where it lives</h2>
+
+<ul class="links">
+  <li><a href="https://github.com/origami-ltd/mit-proof-of-usage-license">Repository and licence text</a></li>
+  <li><a href="https://www.npmjs.com/package/setup-ai-provenance-license">npm: setup-ai-provenance-license</a></li>
+  <li><a href="https://github.com/spdx/license-list-XML/issues/3064">SPDX request #3064</a></li>
+  <li><a href="https://github.com/origami-ltd/mit-proof-of-usage-license/blob/main/ADOPTING.md">How to adopt it</a></li>
+</ul>
+
+<footer>
+The licence template is dedicated to the public domain (CC0) so that anyone can adopt, adapt or
+fork it without asking. By <a href="https://origami.ltd">Origami</a>.
+</footer>
+
+</main>
+</body>
+</html>

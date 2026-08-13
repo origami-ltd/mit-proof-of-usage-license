@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://origami-ltd.github.io/mit-proof-of-usage-license/sitemap.xml
