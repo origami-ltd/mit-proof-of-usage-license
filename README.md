@@ -58,7 +58,9 @@ Nothing about the endpoint is part of the licence above: it is one project's arr
 by that project, and running one is a choice each project makes for itself. A courier that is
 worth using recomputes the hash from the fields it was given rather than trusting a submitted one,
 commits in its own fork so nothing is written to the project until a maintainer merges, answers a
-repeat submission with the pull request that already carries it, and stores nothing.
+repeat submission with the pull request that already carries it, and keeps no store of submissions
+beyond the ordinary server log of the request — which is also the honest thing to say out loud: a
+system that asks a host to act for it announces itself to that host.
 
 ## Use it
 
