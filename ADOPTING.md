@@ -97,7 +97,7 @@ Same idea in `Cargo.toml` (`license-file = "LICENSE.md"`) and `pyproject.toml`
 (`license = { file = "LICENSE.md" }`). In source headers, `SPDX-License-Identifier:
 LicenseRef-MIT-PoU` is the correct form for a licence with no registered identifier.
 
-An SPDX identifier has been requested — [spdx/license-list-XML#3064](https://github.com/spdx/license-list-XML/issues/3064).
+An SPDX identifier has been requested — [spdx/license-list-XML#3065](https://github.com/spdx/license-list-XML/issues/3065).
 Adoption by projects other than the author's is the part of that request that is currently weak,
 so if you do adopt it, say so on that issue: it is the one thing that would move it along.
 

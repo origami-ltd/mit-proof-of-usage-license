@@ -1,30 +1,54 @@
 # SPDX submission draft — `MIT-PoU`
 
-Not submitted. This is the request, written out, ready to send when the licence has actually been
-used somewhere — SPDX asks that a licence be in use before it is listed, and a licence with no
-users is a request for a namespace rather than an identifier.
+Submitted, and kept here so the request and the repository do not drift apart. SPDX asks that a
+licence be in use before it is listed — a licence with no users is a request for a namespace
+rather than an identifier — and the honest state of that is in the "Is it in use?" section below.
 
-**Filed as spdx/license-list-XML#3064** (an earlier #3063 was closed in favour of it, so the
-request and the text agree from the first line).
+**Filed as spdx/license-list-XML#3065**, at tag `v1.1.1`. Two earlier requests are closed: #3063,
+in favour of #3064 when the identifier was settled, and #3064 in favour of this one when the tag
+it named stopped being the current text. Nothing in the terms changed across any of them - a
+request that names a superseded tag is a request a reviewer has to reconcile before reading it.
 
-**Where it goes:** open an issue on
+**What happens next:** the legal team may ask for a pull request adding the XML. Any further
+re-filing goes to the same place — an issue on
 [spdx/license-list-XML](https://github.com/spdx/license-list-XML/issues) using the "New license/
-exception request" template, then follow up with a pull request adding the XML if the legal team
-asks for one.
+exception request" template.
 
 ---
 
-**Proposed full name:** MIT License with AI Provenance Condition
+**Proposed full name:** MIT License with Proof-of-Usage Condition
 
 **Proposed short identifier:** `MIT-PoU`
 
 **License author or steward:** Erasmo Bellumat / Origami 限
 
 **URL of the license text:**
-https://github.com/origami-ltd/mit-proof-of-usage-license/blob/v1.0.1/LICENSE.md
+https://github.com/origami-ltd/mit-proof-of-usage-license/blob/v1.1.1/LICENSE.md
 
-Tagged and frozen at `v1.0.1`. `main` may gain clarifications; the tag is what an identifier would
-point at, and any change to the terms themselves would be a new version and a new identifier.
+Tagged and frozen at `v1.1.1`, which differs from `v1.0.1` in its heading alone: the title now
+carries the short identifier, so the text names itself. `main` may gain clarifications; the tag is
+what an identifier would point at, and any change to the terms themselves would be a new version.
+
+The same text renders as a page at
+https://origami-ltd.github.io/mit-proof-of-usage-license/#text for anyone who would rather read it
+without a repository around it.
+
+**Definitive factors, in their words:**
+
+- **A — does not match a listed licence.** The grant is MIT verbatim, but the added condition is
+  roughly forty lines no listed licence contains, so the texts are not substantially similar under
+  the matching guidelines. Nearest relative in effect, not in wording: BSD-4-Clause.
+- **B — not OSI-approved,** so it does not apply.
+- **C — it is a source licence.** MIT grant, source distributed under it, no restriction on source
+  availability.
+- **D — the text is stable and not in drafting.** Frozen at `v1.1.1`. That tag differs from
+  `v1.0.1` in its heading alone; the terms have not changed since `v1.0`.
+- **E — the steward commits to stability.** The text at `v1.1.1` will not be modified after
+  addition: the tag stays where it points, and no revision of those terms is published under it or
+  under the identifier `MIT-PoU`. A change to the terms would be a new version, a new tag and a
+  separate request with its own identifier, so anything already labelled `MIT-PoU` keeps meaning
+  what it means today. Documentation around the licence may keep changing; the file at the tag may
+  not.
 
 **OSI status:** Not submitted to OSI, and not expected to be approved. The added condition places
 an obligation on a class of user, which the Open Source Definition does not permit. This is a
