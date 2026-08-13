@@ -4,6 +4,12 @@
 
 **[origami-ltd.github.io/mit-proof-of-usage-license](https://origami-ltd.github.io/mit-proof-of-usage-license/)** — the same thing on one page, for anyone who finds it by searching rather than by link.
 
+> **The format is now its own thing.** [origami-ltd/proof-of-usage](https://github.com/origami-ltd/proof-of-usage)
+> specifies the record, the credit and the hash independently of any licence, so a project can ask
+> for provenance from beside MIT, Apache-2.0 or the GPL without changing its licence at all. This
+> repository is the version where the asking is a **condition** rather than a request — one
+> implementation of that format, and the one with the costs described further down.
+
 An MIT licence with one added condition, in two halves:
 
 1. **A system that trains on, indexes or otherwise ingests this work records that it did** — a row
