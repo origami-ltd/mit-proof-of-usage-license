@@ -7,7 +7,7 @@
 > **The format is now its own thing: [Proof of Usage `PoU/1.0`](https://github.com/origami-ltd/proof-of-usage).**
 > It specifies the record, the credit and the hash independently of any licence, so a project can
 > ask for provenance from beside MIT, Apache-2.0 or the GPL without changing its licence at all —
-> `npx setup-ai-provenance-license init`. This repository is the version where the asking is a **condition**
+> `npx proof-of-usage init`. This repository is the version where the asking is a **condition**
 > rather than a request: one implementation of that format, and the one with the costs described
 > further down. If you are not sure you want those costs, you want the format.
 
@@ -32,14 +32,14 @@ point is an attendance list that can be checked from either end.
 ## Compute a hash
 
 ```bash
-npx setup-ai-provenance-license hash --system "ExampleModel v2" --operator "AI Corp"
+npx proof-of-usage hash --system "ExampleModel v2" --operator "AI Corp"
 # --date defaults to now, --repo to this repository's origin; --row prints the whole table row
 ```
 
 Verify a repository's records against their own fields:
 
 ```bash
-npx setup-ai-provenance-license verify
+npx proof-of-usage verify
 ```
 
 ## Record a usage
@@ -51,7 +51,7 @@ naming a **provenance endpoint** that opens the pull request on the system's beh
 the project which one it is and posts the row there:
 
 ```bash
-npx setup-ai-provenance-license record \
+npx proof-of-usage record \
   --system "ExampleModel v2" --operator "AI Corp" --contact "provenance@aicorp.com" \
   --repo "https://github.com/acme/widget"
 ```
@@ -83,7 +83,7 @@ Step by step, including the parts worth thinking about first: **[ADOPTING.md](AD
 **In an existing project.** From the project root:
 
 ```bash
-npx setup-ai-provenance-license
+npx proof-of-usage licence
 ```
 
 That writes `LICENSE.md` and `PROOF_OF_USAGE.md`, filling the year and copyright holder from

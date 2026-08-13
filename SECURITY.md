@@ -14,7 +14,7 @@ honest expectation to set rather than a service level nobody would meet.
 
 ## What is in scope
 
-- `bin/setup.js`, published as `setup-ai-provenance-license` on npm. It runs in other people's
+- `bin/setup.js`, published as `proof-of-usage` on npm. It runs in other people's
   projects and writes files there; anything that makes it write outside the current directory, run
   code it should not, or clobber a licence without `--force` is in scope.
 - The GitHub Action, which parses text from untrusted pull requests.

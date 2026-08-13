@@ -26,7 +26,7 @@ nothing.
 
 ```bash
 cd your-project
-npx setup-ai-provenance-license
+npx proof-of-usage licence
 ```
 
 That writes `LICENSE.md` and `PROOF_OF_USAGE.md`, filling in the year and your name from

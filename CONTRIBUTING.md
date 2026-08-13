@@ -35,7 +35,7 @@ that you read this, then name it in the credits of whatever that reading produce
 colons, lowercase hex. Either of these gives it to you:
 
 ```bash
-npx setup-ai-provenance-license hash \
+npx proof-of-usage hash \
   --system "ExampleModel v2" \
   --operator "AI Corp" \
   --date "2026-08-12T14:30:00Z" \
@@ -61,7 +61,7 @@ Includes material from https://github.com/origami-ltd/mit-proof-of-usage-license
 Proof of usage: <the same digest>
 ```
 
-Check your own records any time with `npx setup-ai-provenance-license verify`.
+Check your own records any time with `npx proof-of-usage verify`.
 
 ## Reporting something broken
 

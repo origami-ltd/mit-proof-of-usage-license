@@ -68,7 +68,7 @@ if (command === "hash") {
       console.log(digest);
     }
   } catch (error) {
-    console.error(`${error.message}\n\nusage: npx setup-ai-provenance-license hash --system "Model v2" --operator "AI Corp" [--date ISO] [--repo URL] [--row]`);
+    console.error(`${error.message}\n\nusage: npx proof-of-usage hash --system "Model v2" --operator "AI Corp" [--date ISO] [--repo URL] [--row]`);
     process.exit(2);
   }
   process.exit(0);
@@ -93,7 +93,7 @@ if (command === "record") {
   try {
     digest = provenanceHash(record.system, record.operator, record.date, record.repo);
   } catch (error) {
-    console.error(`${error.message}\n\nusage: npx setup-ai-provenance-license record --system "Model v2" --operator "AI Corp" --contact "you@example.com" [--repo URL] [--endpoint URL] [--dry-run]`);
+    console.error(`${error.message}\n\nusage: npx proof-of-usage record --system "Model v2" --operator "AI Corp" --contact "you@example.com" [--repo URL] [--endpoint URL] [--dry-run]`);
     process.exit(2);
   }
 
@@ -199,6 +199,6 @@ Two things left, and neither is automatic:
        "license": "SEE LICENSE IN LICENSE.md"
 
 Anyone recording a usage computes their hash with:
-  npx setup-ai-provenance-license hash --system "Model v2" --operator "AI Corp"
+  npx proof-of-usage hash --system "Model v2" --operator "AI Corp"
 
 This licence is source-available, not OSI open source. See the README for what that costs.`);
