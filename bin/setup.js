@@ -3,10 +3,11 @@
 // The tooling for this licence is public domain on purpose: a template nobody may freely copy is
 // a template nobody adopts. Stamp your own project with the licence, not this file.
 /**
- * Three jobs, one binary.
+ * Four jobs, one binary.
  *
  *   (no command)  drop LICENSE.md and PROOF_OF_USAGE.md into the project this is run from
  *   hash          compute the handshake hash for a row
+ *   record        submit the row to the provenance endpoint, which opens the pull request
  *   verify        check a repository's recorded rows against their own fields
  *
  * The installer fills in the year and the copyright holder from whatever the project already
@@ -40,6 +41,16 @@ export function provenanceHash(system, operator, date, repo) {
   return createHash("sha256").update(parts.join(":"), "utf8").digest("hex");
 }
 
+/** The endpoint a project names in its own LICENSE.md, if it names one. Its choice, not ours. */
+async function declaredEndpoint(repo) {
+  const slug = String(repo ?? "").replace(/^https:\/\/github\.com\//, "");
+  if (!slug || slug === repo) return undefined;
+  const licence = await fetch(`https://raw.githubusercontent.com/${slug}/HEAD/LICENSE.md`)
+    .then((r) => (r.ok ? r.text() : ""))
+    .catch(() => "");
+  return licence.match(/PROVENANCE ENDPOINT:\s*(https?:\/\/\S+)/i)?.[1];
+}
+
 function originUrl() {
   const url = quiet("git config --get remote.origin.url");
   if (!url) return "";
@@ -60,6 +71,63 @@ if (command === "hash") {
     console.error(`${error.message}\n\nusage: npx setup-ai-provenance-license hash --system "Model v2" --operator "AI Corp" [--date ISO] [--repo URL] [--row]`);
     process.exit(2);
   }
+  process.exit(0);
+}
+
+if (command === "record") {
+  // For anyone who cannot open the pull request themselves. Some projects publish an appendix to
+  // their licence naming an endpoint that opens it for you; this asks the project which one, and
+  // posts the row there. No endpoint of its own, no default, nothing phoned anywhere else: a
+  // project that names none is a project where the pull request is the only route.
+  const record = {
+    system: opt("system"),
+    operator: opt("operator"),
+    date: opt("date") ?? new Date().toISOString().replace(/\.\d{3}Z$/, "Z"),
+    repo: opt("repo") ?? originUrl(),
+    what: opt("what") ?? "whole repository",
+    purpose: opt("purpose") ?? "training",
+    contact: opt("contact"),
+  };
+
+  let digest;
+  try {
+    digest = provenanceHash(record.system, record.operator, record.date, record.repo);
+  } catch (error) {
+    console.error(`${error.message}\n\nusage: npx setup-ai-provenance-license record --system "Model v2" --operator "AI Corp" --contact "you@example.com" [--repo URL] [--endpoint URL] [--dry-run]`);
+    process.exit(2);
+  }
+
+  console.log(`| ${record.system} | ${record.operator} | ${record.date} | ${record.what} | ${record.purpose} | ${record.contact ?? "?"} | \`${digest}\` |`);
+  if (flags.has("--dry-run")) process.exit(0);
+
+  const endpoint = opt("endpoint") ?? await declaredEndpoint(record.repo);
+  if (!endpoint) {
+    console.error(`
+${record.repo} names no provenance endpoint in its LICENSE.md, so the pull request is the only
+route: fork it, switch to the proof-of-usage branch, add the row above to PROOF_OF_USAGE.md, and
+open the pull request against that branch. Pass --endpoint if you know of one.`);
+    process.exit(1);
+  }
+
+  const answer = await fetch(endpoint, {
+    method: "POST",
+    headers: { "content-type": "application/json" },
+    body: JSON.stringify({ ...record, hash: digest }),
+  }).then((r) => r.json().then((body) => ({ ok: r.ok, body })))
+    .catch((error) => ({ ok: false, body: { error: error.message } }));
+
+  if (!answer.ok) {
+    console.error(`\nthe endpoint refused it: ${answer.body?.error ?? "no reason given"}
+The row above is still the record; open the pull request against the repository's proof-of-usage branch yourself.`);
+    process.exit(1);
+  }
+
+  console.log(answer.body.alreadyRecorded
+    ? `\nalready recorded: ${answer.body.record}`
+    : `\npull request opened: ${answer.body.pullRequest}`);
+  console.log(`\nHalf one done. Half two, whenever the product ships:
+  Includes material from ${record.repo}
+  Proof of usage: ${digest}`);
   process.exit(0);
 }
 

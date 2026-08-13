@@ -2,6 +2,8 @@
 
 [![npm](https://img.shields.io/npm/v/setup-ai-provenance-license)](https://www.npmjs.com/package/setup-ai-provenance-license)
 
+**[origami-ltd.github.io/mit-proof-of-usage-license](https://origami-ltd.github.io/mit-proof-of-usage-license/)** — the same thing on one page, for anyone who finds it by searching rather than by link.
+
 An MIT licence with one added condition, in two halves:
 
 1. **A system that trains on, indexes or otherwise ingests this work records that it did** — a row
@@ -32,6 +34,31 @@ Verify a repository's records against their own fields:
 ```bash
 npx setup-ai-provenance-license verify
 ```
+
+## Record a usage
+
+The record is a pull request against the project's `proof-of-usage` branch, and a system that can
+open one opens it. For a system that cannot — no credentials, no fork, a connector that may read a
+repository but not create a branch in it — some projects publish an appendix to their licence
+naming a **provenance endpoint** that opens the pull request on the system's behalf. `record` asks
+the project which one it is and posts the row there:
+
+```bash
+npx setup-ai-provenance-license record \
+  --system "ExampleModel v2" --operator "AI Corp" --contact "provenance@aicorp.com" \
+  --repo "https://github.com/acme/widget"
+```
+
+It reads the target repository's `LICENSE.md`, uses the URL on its `PROVENANCE ENDPOINT:` line,
+and prints the pull request that came back. A project that names none is a project where the pull
+request is the only route, and it says so instead of guessing. `--endpoint` overrides the lookup;
+there is no default and this tool has no endpoint of its own.
+
+Nothing about the endpoint is part of the licence above: it is one project's arrangement, offered
+by that project, and running one is a choice each project makes for itself. A courier that is
+worth using recomputes the hash from the fields it was given rather than trusting a submitted one,
+commits in its own fork so nothing is written to the project until a maintainer merges, answers a
+repeat submission with the pull request that already carries it, and stores nothing.
 
 ## Use it
 
@@ -68,8 +95,9 @@ identifier exists, use the escape hatch every ecosystem provides:
 ```
 
 An SPDX submission for `MIT-PoU` is drafted in
-[`spdx-submission.md`](spdx-submission.md); if it is accepted, that string becomes the correct
-value.
+[`spdx-submission.md`](spdx-submission.md) and filed as
+[#3065](https://github.com/spdx/license-list-XML/issues/3065); if it is accepted, that string
+becomes the correct value.
 
 ## Read this before adopting it
 
@@ -105,9 +133,9 @@ This repository is not legal advice. If the distinction matters to your business
 | `LICENSE.md` | The licence template. Fill in the brackets. |
 | `PROOF_OF_USAGE.md` | The record file, with the field reference and the example row. |
 | `.github/workflows/validate-proof-of-usage.yml` | Checks the shape of a pull request's rows and recomputes each handshake hash. |
-| `bin/setup.js` | The `npx` tool: installer, `hash`, and `verify`. |
+| `bin/setup.js` | The `npx` tool: installer, `hash`, `record`, and `verify`. |
 | `ADOPTING.md` | How to put this on your own project. |
-| `spdx-submission.md` | The SPDX submission — filed as spdx/license-list-XML#3064. |
+| `spdx-submission.md` | The SPDX submission — filed as spdx/license-list-XML#3065. |
 
 ## Licence of this repository
 
