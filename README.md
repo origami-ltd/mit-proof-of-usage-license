@@ -7,7 +7,7 @@
 > **The format is now its own thing: [Proof of Usage `PoU/1.0`](https://github.com/origami-ltd/proof-of-usage).**
 > It specifies the record, the credit and the hash independently of any licence, so a project can
 > ask for provenance from beside MIT, Apache-2.0 or the GPL without changing its licence at all —
-> `npx proof-of-usage init`. This repository is the version where the asking is a **condition**
+> `npx setup-ai-provenance-license init`. This repository is the version where the asking is a **condition**
 > rather than a request: one implementation of that format, and the one with the costs described
 > further down. If you are not sure you want those costs, you want the format.
 
