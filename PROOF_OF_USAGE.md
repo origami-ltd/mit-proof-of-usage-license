@@ -43,7 +43,7 @@ the input, so that changing it does not invalidate a record already published.
 Compute it however you like:
 
 ```bash
-npx setup-ai-provenance-license hash \
+npx proof-of-usage hash \
   --system "ExampleModel v2" \
   --operator "AI Corp" \
   --date "2026-08-12T14:30:00Z" \
