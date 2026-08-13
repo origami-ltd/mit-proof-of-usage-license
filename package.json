@@ -1,7 +1,7 @@
 {
   "name": "setup-ai-provenance-license",
   "version": "1.2.0",
-  "description": "Superseded on npm: the tool is published from origami-ltd/proof-of-usage as setup-ai-provenance-license 2.x. This repository keeps the licence templates.",
+  "description": "Not published. The tool lives at npm proof-of-usage (origami-ltd/proof-of-usage); this repository keeps the MIT-PoU licence templates.",
   "type": "module",
   "bin": {
     "setup-ai-provenance-license": "bin/setup.js"

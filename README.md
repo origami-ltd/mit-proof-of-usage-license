@@ -1,6 +1,6 @@
 # MIT + Proof of Usage
 
-[![npm](https://img.shields.io/npm/v/setup-ai-provenance-license)](https://www.npmjs.com/package/setup-ai-provenance-license)
+[![npm](https://img.shields.io/npm/v/proof-of-usage?label=proof-of-usage)](https://www.npmjs.com/package/proof-of-usage)
 
 **[origami-ltd.github.io/mit-proof-of-usage-license](https://origami-ltd.github.io/mit-proof-of-usage-license/)** — the same thing on one page, for anyone who finds it by searching rather than by link.
 
@@ -142,7 +142,7 @@ This repository is not legal advice. If the distinction matters to your business
 | `LICENSE.md` | The licence template. Fill in the brackets. |
 | `PROOF_OF_USAGE.md` | The record file, with the field reference and the example row. |
 | `.github/workflows/validate-proof-of-usage.yml` | Checks the shape of a pull request's rows and recomputes each handshake hash. |
-| `bin/setup.js` | The `npx` tool: installer, `hash`, `record`, and `verify`. |
+| `bin/setup.js` | The old installer, kept for reference. The tool is [`proof-of-usage`](https://www.npmjs.com/package/proof-of-usage) now. |
 | `ADOPTING.md` | How to put this on your own project. |
 | `spdx-submission.md` | The SPDX submission — filed as spdx/license-list-XML#3065. |
 
