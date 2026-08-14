@@ -9,7 +9,7 @@
 | name               = MIT License with Proof-of-Usage Condition
 | image              =
 | author             = Erasmo Bellumat (Origami)
-| version            = 1.1.1
+| version            = 1.2.0
 | copyright          =
 | date               = August 2026
 | OSI approved       = No
@@ -38,13 +38,13 @@ The licence text permits a project to name a ''provenance endpoint'': an HTTP se
 == Classification ==
 MIT-PoU is not an [[open-source license]] under the [[Open Source Definition]], because it places an obligation on a class of user; its own documentation describes it as source-available and states this prominently.<ref name="repo" /> The credit requirement is an attribution-in-advertising term of the kind introduced by the [[BSD licenses#4-clause license (original "BSD License")|4-clause BSD license]], with the [[License compatibility|GPL incompatibility]] that implies.
 
-A request for the [[Software Package Data Exchange|SPDX]] identifier <code>MIT-PoU</code> was filed in August 2026 and is pending review.<ref name="spdx">{{cite web |title=New license request: MIT License with Proof-of-Usage Condition (MIT-PoU), v1.1.1 |url=https://github.com/spdx/license-list-XML/issues/3065 |website=GitHub |access-date=14 August 2026}}</ref> Until an identifier exists, adopting projects are directed to declare <code>SEE LICENSE IN LICENSE.md</code> in package manifests rather than claim the <code>MIT</code> identifier.
+A request for the [[Software Package Data Exchange|SPDX]] identifier <code>MIT-PoU</code> was filed in August 2026 and is pending review.<ref name="spdx">{{cite web |title=New license request: MIT License with Proof-of-Usage Condition (MIT-PoU), v1.2.0 |url=https://github.com/spdx/license-list-XML/issues/3065 |website=GitHub |access-date=14 August 2026}}</ref> Until an identifier exists, adopting projects are directed to declare <code>SEE LICENSE IN LICENSE.md</code> in package manifests rather than claim the <code>MIT</code> identifier.
 
 == Relationship to the Proof of Usage format ==
 The record-and-credit mechanism was subsequently specified independently of the licence as ''Proof of Usage'' (PoU/1.0), a public-domain ([[CC0]]) provenance format that any project can adopt beside an unmodified MIT, [[Apache License|Apache-2.0]] or [[GNU General Public License|GPL]] licence as a non-binding request.<ref name="pou">{{cite web |title=Proof of Usage |url=https://github.com/origami-ltd/proof-of-usage |website=GitHub |access-date=14 August 2026}}</ref> Under that framing, MIT-PoU is the variant in which the request is a licence condition. A reference implementation is distributed on [[npm]] as <code>proof-of-usage</code>.
 
 == Adoption ==
-As of August 2026 the licence is used by five repositories. Four belong to its author, covering the WebAssembly game-preservation projects of wasm.ltd. The first outside adoption was [[Grand Theft Auto: Vice City|reVC]], a reverse-engineered game codebase whose maintainers had previously declined to attach any licence, and which adopted MIT-PoU on 13 August 2026.<ref name="revc">{{cite web |title=Proposal: license this repository under MIT-PoU |url=https://github.com/mrxenginner/reVC/pull/37 |website=GitHub |access-date=14 August 2026}}</ref>
+As of August 2026 the licence is used by six repositories. Four belong to its author, covering the WebAssembly game-preservation projects of wasm.ltd. The first outside adoption was [[Grand Theft Auto: Vice City|reVC]], a reverse-engineered game codebase whose maintainers had previously declined to attach any licence, and which adopted MIT-PoU on 13 August 2026; a second repository, cloudfunding, adopted it the following day.<ref name="revc">{{cite web |title=Proposal: license this repository under MIT-PoU |url=https://github.com/mrxenginner/reVC/pull/37 |website=GitHub |access-date=14 August 2026}}</ref>
 
 == See also ==
 * [[MIT License]]

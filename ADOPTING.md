@@ -49,9 +49,14 @@ Two parts in this repository
    text is in <file>. No condition of mine attaches to it.
 ```
 
-## 2. Create the branch the licence names
+## 2. Choose where the record lives
 
-The condition tells operators to open a pull request against a provenance branch. Make it exist:
+The condition tells operators to open a pull request against your designated provenance branch —
+and as of v1.2.0 the licence says plainly that the name is a suggestion: any branch that accepts
+pull requests serves, and if you designate nothing, your default branch is the designated one. So
+the minimum is nothing at all beyond committing `PROOF_OF_USAGE.md`.
+
+The dedicated branch is still the tidier home for a register that grows on its own schedule:
 
 ```bash
 git switch --orphan proof-of-usage
@@ -62,6 +67,7 @@ git switch -
 ```
 
 An orphan branch keeps it to one file, so anyone sent there sees exactly what is being asked.
+Skip this entirely if the default branch suits you; the licence reads the same either way.
 
 ## 3. Add the check
 
