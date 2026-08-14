@@ -1,0 +1,59 @@
+{{Short description|Source-available software licence based on the MIT License}}
+<!-- DRAFT — not yet submitted. Every source below is primary. Wikipedia's general notability
+     guideline requires significant coverage in independent, reliable secondary sources; until at
+     least two or three exist (technology press, academic writing on AI provenance, or the SPDX
+     acceptance plus commentary on it), this draft does not survive review. The author of the
+     licence has a conflict of interest under WP:COI: submit through Articles for Creation
+     (WP:AFC) with a {{UserboxCOI}} declaration, never directly to mainspace. -->
+{{Infobox software license
+| name               = MIT License with Proof-of-Usage Condition
+| image              =
+| author             = Erasmo Bellumat (Origami)
+| version            = 1.1.1
+| copyright          =
+| date               = August 2026
+| OSI approved       = No
+| Debian approved    = No
+| Free Software      = No
+| GPL compatible     = No
+| copyleft           = No
+| linking            = Yes
+| website            = {{URL|https://github.com/origami-ltd/mit-proof-of-usage-license}}
+}}
+
+The '''MIT License with Proof-of-Usage Condition''' ('''MIT-PoU''') is a [[source-available software]] licence derived from the [[MIT License]]. It retains the MIT grant in full and adds one condition addressed to operators of automated systems: a system that reads, indexes, trains on or otherwise ingests the licensed work must record that usage in the work's repository, and any product resulting from that usage must credit the work alongside a verifiable [[cryptographic hash]].<ref name="repo">{{cite web |title=MIT + Proof of Usage |url=https://github.com/origami-ltd/mit-proof-of-usage-license |website=GitHub |access-date=14 August 2026}}</ref>
+
+The licence was published in August 2026 by the Brazilian developer Erasmo Bellumat under the Origami studio, in response to the absence of any standard record of which [[artificial intelligence]] systems have been trained on a given open code base.<ref name="repo" />
+
+== Terms ==
+The permission grant is the MIT License unmodified. The added condition has two halves:
+
+# '''Record''' — an automated system that ingests the work opens a [[pull request]] adding one row to a register file (<code>PROOF_OF_USAGE.md</code>) in the work's repository, naming the system, its operator, an [[ISO 8601]] timestamp, the scope of access, a purpose, a contact address, and a provenance hash. The licence describes this half as mandatory and not deferrable.
+# '''Credit''' — whatever the usage produced names the work in the credits it already publishes (about page, [[model card]], dataset card or documentation), together with the same hash. This half carries no deadline.
+
+The provenance hash is defined as {{code|SHA-256("SystemName:OperatorName:ISODate:WorkURL")}}. Because the digest appears both in the repository's register and in the product's credits, either half can be checked against the other by recomputation, without any central registry or telemetry.<ref name="repo" />
+
+The licence text permits a project to name a ''provenance endpoint'': an HTTP service that opens the required pull request on behalf of systems that cannot do so themselves, such as agents with read-only repository access. The licence requires no payment, imposes no restriction on what may be built, and its documentation states that it is unenforced by design.<ref name="repo" />
+
+== Classification ==
+MIT-PoU is not an [[open-source license]] under the [[Open Source Definition]], because it places an obligation on a class of user; its own documentation describes it as source-available and states this prominently.<ref name="repo" /> The credit requirement is an attribution-in-advertising term of the kind introduced by the [[BSD licenses#4-clause license (original "BSD License")|4-clause BSD license]], with the [[License compatibility|GPL incompatibility]] that implies.
+
+A request for the [[Software Package Data Exchange|SPDX]] identifier <code>MIT-PoU</code> was filed in August 2026 and is pending review.<ref name="spdx">{{cite web |title=New license request: MIT License with Proof-of-Usage Condition (MIT-PoU), v1.1.1 |url=https://github.com/spdx/license-list-XML/issues/3065 |website=GitHub |access-date=14 August 2026}}</ref> Until an identifier exists, adopting projects are directed to declare <code>SEE LICENSE IN LICENSE.md</code> in package manifests rather than claim the <code>MIT</code> identifier.
+
+== Relationship to the Proof of Usage format ==
+The record-and-credit mechanism was subsequently specified independently of the licence as ''Proof of Usage'' (PoU/1.0), a public-domain ([[CC0]]) provenance format that any project can adopt beside an unmodified MIT, [[Apache License|Apache-2.0]] or [[GNU General Public License|GPL]] licence as a non-binding request.<ref name="pou">{{cite web |title=Proof of Usage |url=https://github.com/origami-ltd/proof-of-usage |website=GitHub |access-date=14 August 2026}}</ref> Under that framing, MIT-PoU is the variant in which the request is a licence condition. A reference implementation is distributed on [[npm]] as <code>proof-of-usage</code>.
+
+== Adoption ==
+As of August 2026 the licence is used by five repositories. Four belong to its author, covering the WebAssembly game-preservation projects of wasm.ltd. The first outside adoption was [[Grand Theft Auto: Vice City|reVC]], a reverse-engineered game codebase whose maintainers had previously declined to attach any licence, and which adopted MIT-PoU on 13 August 2026.<ref name="revc">{{cite web |title=Proposal: license this repository under MIT-PoU |url=https://github.com/mrxenginner/reVC/pull/37 |website=GitHub |access-date=14 August 2026}}</ref>
+
+== See also ==
+* [[MIT License]]
+* [[Source-available software]]
+* [[Software Package Data Exchange]]
+* [[Artificial intelligence and copyright]]
+
+== References ==
+{{Reflist}}
+
+[[Category:Software licenses]]
+[[Category:Source-available software licenses]]
