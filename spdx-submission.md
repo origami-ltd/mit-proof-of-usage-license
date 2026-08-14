@@ -4,10 +4,9 @@ Submitted, and kept here so the request and the repository do not drift apart. S
 licence be in use before it is listed — a licence with no users is a request for a namespace
 rather than an identifier — and the honest state of that is in the "Is it in use?" section below.
 
-**Filed as spdx/license-list-XML#3065**, at tag `v1.2.0`. Two earlier requests are closed: #3063,
-in favour of #3064 when the identifier was settled, and #3064 in favour of this one when the tag
-it named stopped being the current text. Nothing in the terms changed across any of them - a
-request that names a superseded tag is a request a reviewer has to reconcile before reading it.
+**Filed as spdx/license-list-XML#3068**, at tag `v1.2.0` with the adoption list current. Three
+earlier requests are closed, each with a pointer forward: #3063 (identifier settled), #3064 (tag
+superseded), #3065 (tracked two versions by edits; refiled clean once the wording settled).
 
 **What happens next:** the legal team may ask for a pull request adding the XML. Any further
 re-filing goes to the same place — an issue on

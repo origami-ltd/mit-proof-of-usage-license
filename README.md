@@ -45,7 +45,7 @@ identifier exists, use the escape hatch every ecosystem provides:
 
 An SPDX identifier has been requested as `MIT-PoU` — drafted in
 [`spdx-submission.md`](spdx-submission.md), filed as
-[spdx/license-list-XML#3065](https://github.com/spdx/license-list-XML/issues/3065). If it is
+[spdx/license-list-XML#3068](https://github.com/spdx/license-list-XML/issues/3068). If it is
 accepted, that string becomes the correct value.
 
 ## Read this before adopting it
