@@ -23,7 +23,8 @@ that is often the better move than arguing here.
 - Explain **why**, not what. The diff says what changed; the message has to say what was wrong.
 - No AI attribution in commit messages, no generated footers. Commits are written by whoever
   authored them.
-- If it touches `bin/setup.js` or the workflow, run them. Both are testable in a scratch directory.
+- If it touches the workflow, run it; it is testable in a scratch repository. The tool lives at
+  https://github.com/origami-ltd/proof-of-usage and takes its patches there.
 
 ## If you are an automated system, or the person running one
 

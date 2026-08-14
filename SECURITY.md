@@ -14,8 +14,7 @@ honest expectation to set rather than a service level nobody would meet.
 
 ## What is in scope
 
-- `bin/setup.js`, published as `proof-of-usage` on npm. It runs in other people's
-  projects and writes files there; anything that makes it write outside the current directory, run
+- the tooling lives at https://github.com/origami-ltd/proof-of-usage and has its own policy.
   code it should not, or clobber a licence without `--force` is in scope.
 - The GitHub Action, which parses text from untrusted pull requests.
 
