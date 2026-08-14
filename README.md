@@ -22,6 +22,26 @@ any licence — and usable beside unmodified MIT, Apache-2.0 or GPL as a request
 [origami-ltd/proof-of-usage](https://github.com/origami-ltd/proof-of-usage), which also holds the
 tooling and the **[adoption guide](https://github.com/origami-ltd/proof-of-usage/blob/main/ADOPTING.md)**.
 
+## Why this exists
+
+The MIT License asks for one thing in exchange for everything it grants: the copyright notice and
+permission notice travel with the copies. One sentence, and it is the whole consideration.
+
+**Training corpora do not carry it.** A repository scraped into a dataset keeps the notice only as
+far as the file that held it, and files are shuffled, deduplicated, chunked and tokenised — after
+which the notice is attached to nothing. What a model emits later carries no attribution because
+there is no mechanism by which it could: the artefact that would have carried it was destroyed in
+preprocessing. That is rarely bad faith. MIT's compliance mechanism assumes copying files, and
+this use copies statistical structure.
+
+That leaves a licensor with a term satisfied in form and empty in substance. Waiving attribution
+gives up the only thing MIT ever asked for; forbidding training gives up the permissiveness that
+made the work worth using. This licence takes the third route: **keep the grant unchanged, and
+move the attribution to surfaces that survive the pipeline** — a record in the repository, which
+is upstream of ingestion and cannot be stripped by it, and a credit in the product's own credits or
+model card, which is the surface that does survive. The hash ties the two together so either can
+be checked against the other, by anyone, with nothing to trust.
+
 ## Adopt it
 
 ```bash
