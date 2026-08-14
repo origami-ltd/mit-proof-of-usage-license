@@ -13,6 +13,7 @@ purpose, a single row covering the period is enough.
 | System | Operator | Date and Time (UTC) | What | Purpose | Contact | Provenance Hash |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | ExampleModel v2 | AI Corp | 2026-08-12T14:30:00Z | whole repository | training | contact@aicorp.com | `471e3dc7467c3c9f83be8199e5ed76b2635a0aefc86b2e3679ffc836fc9c741c` |
+| OpenAI Codex GPT-5 | Erasmo Bellumat | 2026-08-14T14:04:04Z | LICENSE.md, PROOF_OF_USAGE.md, ADOPTING.md, AGENTS.md, bin/setup.js, validation workflow | code generation | https://github.com/ebellumat | `2ef15ba689e245acfd3bc0452fffa87615d0711832ca2a61e597bdffbee3f438` |
 
 <!-- The example row's hash is the real digest of its own four fields against
      https://github.com/acme/widget, so it does not match this repository's URL - it is an
