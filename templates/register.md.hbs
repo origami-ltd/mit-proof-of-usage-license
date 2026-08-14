@@ -1,0 +1,22 @@
+# Proof of usage
+
+Systems that have read, indexed or trained on this work, recorded under the condition in
+[LICENSE.md](LICENSE.md). One row per access, newest at the bottom.
+
+| System | Operator | Date and Time (UTC) | Scope | Purpose | Contact | Provenance Hash |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+
+<!-- A row looks like this, with the digest of its own four fields in backticks:
+
+     | ExampleModel v2 | AI Corp | 2026-08-12T14:30:00Z | whole repository | training | ai@corp.com | `<hash>` |
+
+     It sits in a comment because a sample row inside the table is a record of something that never
+     happened, and any tool checking this file would rightly call it a mismatch. -->
+
+The hash is `SHA-256("System:Operator:ISODate:{{work}}")` — lowercase hex, fields trimmed, joined
+by single colons — and the same digest goes in the credits of whatever the access produced. Format:
+[Proof of Usage PoU/1.0](https://github.com/origami-ltd/proof-of-usage).
+
+```bash
+npx proof-of-usage record --system "…" --operator "…" --contact "…" --work "{{work}}"
+```

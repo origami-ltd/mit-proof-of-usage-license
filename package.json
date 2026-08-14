@@ -1,0 +1,11 @@
+{
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "plop": "plop",
+    "page": "node tools/sync-page.mjs"
+  },
+  "devDependencies": {
+    "plop": "^4.0.1"
+  }
+}

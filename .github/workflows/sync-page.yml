@@ -1,0 +1,41 @@
+name: Sync the page's licence embed
+
+# The published page carries the full licence text, and copies maintained by hand drift - one of
+# them once vanished into a detached HEAD. Any change to LICENSE.md on main re-renders the embed
+# on gh-pages mechanically, through the same script a maintainer runs locally.
+on:
+  push:
+    branches: [main]
+    paths:
+      - LICENSE.md
+      - tools/**
+
+permissions:
+  contents: write
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/checkout@v4
+        with:
+          ref: gh-pages
+          path: pages
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - run: node tools/sync-page.mjs pages
+
+      - name: Publish if the embed moved
+        working-directory: pages
+        run: |
+          if git diff --quiet; then
+            echo "already in sync"
+            exit 0
+          fi
+          git config user.name "Erasmo Bellumat"
+          git config user.email "lbj.erasmo@gmail.com"
+          git commit -am "Carry the current licence text into the page embed"
+          git push
