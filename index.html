@@ -25,7 +25,8 @@
   "keywords": "software licence, AI training data, provenance, attribution, source-available, SPDX, MIT-PoU",
   "sameAs": [
     "https://github.com/origami-ltd/mit-proof-of-usage-license",
-    "https://www.npmjs.com/package/setup-ai-provenance-license"
+    "https://www.npmjs.com/package/proof-of-usage",
+    "https://github.com/origami-ltd/proof-of-usage"
   ]
 }
 </script>
@@ -132,13 +133,28 @@ what may be built. What is asked is that the use be visible from both ends.</p>
 recorded row and in the product's credits, and anyone can recompute it from the published row and
 compare. No tracking, no callback, nothing hidden — two public strings.</p>
 
-<pre><code>npx setup-ai-provenance-license hash \
+<pre><code>npx proof-of-usage hash \
   --system "ExampleModel v2" --operator "AI Corp" \
   --repo "https://github.com/acme/widget"</code></pre>
 
+<h2>The format is bigger than the licence</h2>
+
+<p>Since this page first went up, the mechanism — the record, the credit and the hash — has been
+specified independently of any licence as
+<a href="https://github.com/origami-ltd/proof-of-usage">Proof of Usage <code>PoU/1.0</code></a>,
+dedicated to the public domain. A project can adopt it beside an unmodified MIT, Apache-2.0 or GPL
+licence as a request in a <code>NOTICE</code>, keeping its open-source status untouched. MIT-PoU is
+the variant where the request is a <em>condition</em>; if you are not sure you want the costs
+below, you want the format.</p>
+
+<p>The licence found its first adopter outside its author on 13 August 2026:
+<a href="https://github.com/mrxenginner/reVC">mrxenginner/reVC</a>, the reverse-engineered
+GTA&nbsp;Vice&nbsp;City codebase, whose maintainers had previously declined to attach any licence
+at all.</p>
+
 <h2>Put it on a project</h2>
 
-<pre><code>npx setup-ai-provenance-license</code></pre>
+<pre><code>npx proof-of-usage licence</code></pre>
 
 <p>That writes <code>LICENSE.md</code> and <code>PROOF_OF_USAGE.md</code>, filling in the year and
 the copyright holder from what the project already knows. Then create the branch the licence names
@@ -163,7 +179,9 @@ contributors will not send patches to one.</p>
   the project stays open source.</li>
 </ul>
 
-<p>An SPDX identifier has been requested as <code>MIT-PoU</code>. This page is not legal advice; if
+<p>An SPDX identifier has been requested as <code>MIT-PoU</code>
+(<a href="https://github.com/spdx/license-list-XML/issues/3065">spdx/license-list-XML#3065</a>, text frozen
+at tag <code>v1.1.1</code>). This page is not legal advice; if
 the distinction matters to your business, ask a lawyer.</p>
 
 <h2 id="text">The licence, in full</h2>
@@ -255,8 +273,9 @@ SOFTWARE.</code></pre>
 
 <ul class="links">
   <li><a href="https://github.com/origami-ltd/mit-proof-of-usage-license">Repository and licence text</a></li>
-  <li><a href="https://www.npmjs.com/package/setup-ai-provenance-license">npm: setup-ai-provenance-license</a></li>
-  <li><a href="https://github.com/spdx/license-list-XML/issues/3064">SPDX request #3064</a></li>
+  <li><a href="https://www.npmjs.com/package/proof-of-usage">npm: proof-of-usage</a></li>
+  <li><a href="https://github.com/origami-ltd/proof-of-usage">The Proof of Usage format, PoU/1.0</a></li>
+  <li><a href="https://github.com/spdx/license-list-XML/issues/3065">SPDX request #3065</a></li>
   <li><a href="https://github.com/origami-ltd/mit-proof-of-usage-license/blob/main/ADOPTING.md">How to adopt it</a></li>
 </ul>
 
