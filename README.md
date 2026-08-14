@@ -1,4 +1,6 @@
-# MIT + Proof of Usage
+# MIT-PoU
+
+**The MIT License with Proof-of-Usage Condition.**
 
 [![npm](https://img.shields.io/npm/v/proof-of-usage?label=proof-of-usage)](https://www.npmjs.com/package/proof-of-usage)
 
