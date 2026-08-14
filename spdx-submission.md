@@ -4,7 +4,7 @@ Submitted, and kept here so the request and the repository do not drift apart. S
 licence be in use before it is listed — a licence with no users is a request for a namespace
 rather than an identifier — and the honest state of that is in the "Is it in use?" section below.
 
-**Filed as spdx/license-list-XML#3065**, at tag `v1.1.1`. Two earlier requests are closed: #3063,
+**Filed as spdx/license-list-XML#3065**, at tag `v1.2.0`. Two earlier requests are closed: #3063,
 in favour of #3064 when the identifier was settled, and #3064 in favour of this one when the tag
 it named stopped being the current text. Nothing in the terms changed across any of them - a
 request that names a superseded tag is a request a reviewer has to reconcile before reading it.
@@ -23,10 +23,12 @@ exception request" template.
 **License author or steward:** Erasmo Bellumat / Origami 限
 
 **URL of the license text:**
-https://github.com/origami-ltd/mit-proof-of-usage-license/blob/v1.1.1/LICENSE.md
+https://github.com/origami-ltd/mit-proof-of-usage-license/blob/v1.2.0/LICENSE.md
 
-Tagged and frozen at `v1.1.1`, which differs from `v1.0.1` in its heading alone: the title now
-carries the short identifier, so the text names itself. `main` may gain clarifications; the tag is
+Tagged and frozen at `v1.2.0`. Since `v1.0.1`: the heading carries the short identifier so the
+text names itself (`v1.1.1`), and the record clause now says explicitly what the markup notes
+always intended - the branch name is a suggestion, any branch that accepts pull requests serves,
+and absent a designation the default branch is the one (`v1.2.0`). `main` may gain clarifications; the tag is
 what an identifier would point at, and any change to the terms themselves would be a new version.
 
 The same text renders as a page at
@@ -41,9 +43,10 @@ without a repository around it.
 - **B — not OSI-approved,** so it does not apply.
 - **C — it is a source licence.** MIT grant, source distributed under it, no restriction on source
   availability.
-- **D — the text is stable and not in drafting.** Frozen at `v1.1.1`. That tag differs from
-  `v1.0.1` in its heading alone; the terms have not changed since `v1.0`.
-- **E — the steward commits to stability.** The text at `v1.1.1` will not be modified after
+- **D — the text is stable and not in drafting.** Frozen at `v1.2.0`. The grant and both halves
+  of the condition are unchanged since `v1.0`; `v1.1.1` renamed the heading and `v1.2.0` made the
+  branch-name-is-a-suggestion reading explicit in the clause itself.
+- **E — the steward commits to stability.** The text at `v1.2.0` will not be modified after
   addition: the tag stays where it points, and no revision of those terms is published under it or
   under the identifier `MIT-PoU`. A change to the terms would be a new version, a new tag and a
   separate request with its own identifier, so anything already labelled `MIT-PoU` keeps meaning
