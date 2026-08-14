@@ -8,6 +8,9 @@ rather than an identifier — and the honest state of that is in the "Is it in u
 earlier requests are closed, each with a pointer forward: #3063 (identifier settled), #3064 (tag
 superseded), #3065 (tracked two versions by edits; refiled clean once the wording settled).
 
+**Prepared for acceptance:** the XML and the test text the process asks the submitter for are in
+[`spdx/`](spdx/), written to `DOCS/xml-fields.md` - copy-ready the day the Legal Team says yes.
+
 **What happens next:** the legal team may ask for a pull request adding the XML. Any further
 re-filing goes to the same place — an issue on
 [spdx/license-list-XML](https://github.com/spdx/license-list-XML/issues) using the "New license/

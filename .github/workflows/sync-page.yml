@@ -26,7 +26,17 @@ jobs:
         with:
           node-version: 22
 
+      - run: node tools/sync-licenseref.mjs
       - run: node tools/sync-page.mjs pages
+
+      - name: Commit the LicenseRef copy if it moved
+        run: |
+          if ! git diff --quiet; then
+            git config user.name "Erasmo Bellumat"
+            git config user.email "lbj.erasmo@gmail.com"
+            git commit -am "Regenerate the LicenseRef text from LICENSE.md"
+            git push
+          fi
 
       - name: Publish if the embed moved
         working-directory: pages

@@ -48,6 +48,21 @@ An SPDX identifier has been requested as `MIT-PoU` — drafted in
 [spdx/license-list-XML#3068](https://github.com/spdx/license-list-XML/issues/3068). If it is
 accepted, that string becomes the correct value.
 
+## Machine identifiers, today
+
+Until the SPDX request lands, the licence is still expressible everywhere the SPDX syntax reaches,
+through the escape hatch built for exactly this:
+
+- **Source headers and SBOMs:** `SPDX-License-Identifier: LicenseRef-MIT-PoU` — valid SPDX
+  expression syntax, no registration needed. Under the [REUSE](https://reuse.software)
+  layout, the reference resolves to [`LICENSES/LicenseRef-MIT-PoU.txt`](LICENSES/LicenseRef-MIT-PoU.txt),
+  which CI regenerates from `LICENSE.md` so it cannot drift.
+- **npm:** `"license": "SEE LICENSE IN LICENSE.md"` — npm rejects `LicenseRef-` in the field.
+- **Cargo:** `license-file = "LICENSE.md"`. **Python:** `license = { file = "LICENSE.md" }`.
+- **GitHub and GitLab licence badges** come from the SPDX list via the licensee library; they will
+  not show MIT-PoU before [spdx/license-list-XML#3068](https://github.com/spdx/license-list-XML/issues/3068)
+  is accepted. The XML that acceptance will ask for is prepared in [`spdx/`](spdx/).
+
 ## Read this before adopting it
 
 **This is not an OSI-approved open source licence, and calling it one would be wrong.** The Open
