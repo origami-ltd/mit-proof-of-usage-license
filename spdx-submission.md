@@ -54,17 +54,20 @@ without a repository around it.
 an obligation on a class of user, which the Open Source Definition does not permit. This is a
 source-available licence and is described as one wherever it appears.
 
-**Is it in use?** Yes, by five repositories at the time of writing:
+**Is it in use?** Yes, by six repositories at the time of writing:
 
 - https://github.com/mrxenginner/reVC — the first adopter that is not the author's. Proposed by
   the author (as maintainer of a downstream port), reviewed and merged by that repository's
   maintainer in [reVC#37](https://github.com/mrxenginner/reVC/pull/37).
+- https://github.com/gumiranda/cloudfunding — adopted 14 August 2026, replaceable fields filled;
+  its copyright notice names its author and the licence's author jointly, a caveat stated in the
+  request rather than left to be found.
 - https://github.com/origami-ltd/wasm.com.br
 - https://github.com/origami-ltd/wasm-revc
 - https://github.com/origami-ltd/wasm-generals (the `web/` portion; the engine is GPL-3.0)
 - https://github.com/origami-ltd/mit-proof-of-usage-license (the template itself)
 
-Four of the five are by the same author, which remains the honest weakness of this submission:
+Four of the six are by the same author, which remains the honest weakness of this submission:
 SPDX asks for a licence in use, and one outside adoption is a start rather than a settlement. If
 the list team would rather wait for more, that is a reasonable answer and this can sit until there
 is some.
