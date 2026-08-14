@@ -1,7 +1,7 @@
 {
   "name": "setup-ai-provenance-license",
   "version": "1.2.0",
-  "description": "Not published. The tool lives at npm proof-of-usage (origami-ltd/proof-of-usage); this repository keeps the MIT-PoU licence templates.",
+  "description": "MIT-PoU licence templates. The tool lives on npm as proof-of-usage (github.com/origami-ltd/proof-of-usage); bin/setup.js here is the original installer, kept working for old links.",
   "type": "module",
   "bin": {
     "setup-ai-provenance-license": "bin/setup.js"
